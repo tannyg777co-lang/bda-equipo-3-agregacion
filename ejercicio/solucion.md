@@ -1,6 +1,6 @@
-# Solución del mini ejercicio
+## Solución del mini ejercicio
 
-`aggregatewordcount` cuenta tokens separados por espacios o tabuladores. Las palabras distinguen mayúsculas de minúsculas.
+`aggregatewordcount` cuenta tokens separados por espacios, tabuladores o saltos de línea. Las palabras distinguen mayúsculas de minúsculas y no se quita la puntuación.
 
 Con el archivo del ejercicio, `aggregatewordcount` muestra:
 
@@ -17,3 +17,5 @@ y           1
 ```text
 WORD_HISTOGRAM    5    1    2    2    1.8    0.4000000000000001
 ```
+
+Es decir: 5 palabras distintas, mínimo 1, mediana 2, máximo 2, promedio 9/5 = 1.8 y desviación estándar 0.4.
