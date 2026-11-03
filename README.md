@@ -106,15 +106,6 @@ En `aggregatewordhist`, esos conteos tienen siete palabras distintas, mínimo 1,
 WORD_HISTOGRAM    7    1    2    2    1.7142857142857142    0.45175395145262565
 ```
 
-## Solución de problemas
-
-- **`hadoop: command not found`**: dentro del contenedor ejecuta `source ~/.bashrc`.
-- **`JAVA_HOME is not set`**: carga `~/.bashrc` como arriba; la práctica configura Java allí.
-- **`Input path does not exist`**: verifica que el proyecto se copió a `/home/hadoop/bda-equipo-3-agregacion` y que existe `datos/entrada.txt`.
-- **`Output directory already exists`**: vuelve a ejecutar `bash scripts/ejecutar.sh`; el script elimina solo las carpetas de salida de esta práctica.
-- **No se encuentra el JAR**: verifica que `hadoop version` indique 3.3.6 y que el archivo exista bajo `$HADOOP_HOME/share/hadoop/mapreduce/`.
-- Si la clase no acepta `textinputformat`, revisa la sintaxis de esta distribución con `hadoop jar "$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar" aggregatewordcount`; el ejemplo de Hadoop espera entrada, salida, número de reducers y formato de entrada.
-
 ## Mini ejercicio
 
 Completa el ejercicio en [`ejercicio/ejercicio.md`](./ejercicio/ejercicio.md) y comprueba después tu respuesta con [`ejercicio/solucion.md`](./ejercicio/solucion.md). El script acepta una carpeta de entrada opcional; al terminar, vuelve a ejecutar `bash scripts/ejecutar.sh` sin argumentos para restaurar la demostración principal.
@@ -126,23 +117,3 @@ Completa el ejercicio en [`ejercicio/ejercicio.md`](./ejercicio/ejercicio.md) y 
 3. **`aggregatewordhist` (2 min):** mostrar cómo el agregador `VALUE_HISTOGRAM` resume la distribución de conteos.
 4. **Demo en vivo (3 min):** copiar el proyecto al contenedor, ejecutar el script y leer los dos `part-r-00000`.
 5. **Mini ejercicio (2 min):** pedir que predigan los conteos y las estadísticas del archivo de [`ejercicio/`](./ejercicio/).
-
-## Entrega
-
-Antes de publicar `bda-equipo-3-agregacion` en GitHub:
-
-1. Añade el PDF de la presentación en la raíz.
-2. Confirma los resultados reales de tu contenedor dentro de `resultados/`.
-3. Prueba los pasos desde una copia limpia del repositorio (o pide a otro equipo que los siga).
-4. No subas el tarball de Hadoop ni salidas grandes.
-
-Para subirlo, crea primero un repositorio público vacío en GitHub llamado `bda-equipo-3-agregacion`. Luego, desde tu computadora y dentro de la carpeta de este proyecto:
-
-```bash
-git init
-git add .
-git commit -m "Agrega práctica de agregación en Hadoop"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/bda-equipo-3-agregacion.git
-git push -u origin main
-```
