@@ -109,11 +109,3 @@ WORD_HISTOGRAM    7    1    2    2    1.7142857142857142    0.45175395145262565
 ## Mini ejercicio
 
 Completa el ejercicio en [`ejercicio/ejercicio.md`](./ejercicio/ejercicio.md) y comprueba después tu respuesta con [`ejercicio/solucion.md`](./ejercicio/solucion.md). El script acepta una carpeta de entrada opcional; al terminar, vuelve a ejecutar `bash scripts/ejecutar.sh` sin argumentos para restaurar la demostración principal.
-
-## Guion sugerido para la exposición (10 minutos)
-
-1. **Problema y caso real (1 min):** contar términos de documentos y resumir su frecuencia.
-2. **`aggregatewordcount` (2 min):** explicar tokenización, `LongValueSum` y el diagrama Map → Shuffle/Sort → Reduce.
-3. **`aggregatewordhist` (2 min):** mostrar cómo el agregador `VALUE_HISTOGRAM` resume la distribución de conteos.
-4. **Demo en vivo (3 min):** copiar el proyecto al contenedor, ejecutar el script y leer los dos `part-r-00000`.
-5. **Mini ejercicio (2 min):** pedir que predigan los conteos y las estadísticas del archivo de [`ejercicio/`](./ejercicio/).
