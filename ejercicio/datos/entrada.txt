@@ -1,0 +1,3 @@
+hadoop procesa datos
+hadoop procesa textos
+datos y textos

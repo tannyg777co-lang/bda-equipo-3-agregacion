@@ -1,0 +1,4 @@
+hadoop procesa datos
+mapreduce cuenta palabras
+hadoop cuenta datos
+mapreduce agrupa palabras
